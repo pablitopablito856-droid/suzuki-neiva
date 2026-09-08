@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. Lógica del Popup Modal ---
     const modal = document.getElementById('promoModal');
@@ -470,6 +470,11 @@
                     colorsContainer.appendChild(thumb);
                 });
                 
+                const modalWaBtn = document.getElementById('modal-wa-btn');
+                if (modalWaBtn) {
+                    modalWaBtn.href = `https://wa.me/573016498756?text=${encodeURIComponent('Hola Suzuki Neiva, quiero cotizar la moto ' + bike.name)}`;
+                }
+
                 techModal.style.display = 'flex';
             }
         });
